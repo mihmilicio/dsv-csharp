@@ -7,7 +7,8 @@ namespace ListaExercicio1
         private static void Main(string[] args)
         {
             // RectangleArea.Exec();
-            CurrencyExchange.Exec();
+            // CurrencyExchange.Exec();
+            SortVector.Exec();
         }
     }
 }
