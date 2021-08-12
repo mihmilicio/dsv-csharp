@@ -6,7 +6,8 @@ namespace ListaExercicio1
     {
         private static void Main(string[] args)
         {
-            RectangleArea.Exec(); 
+            // RectangleArea.Exec();
+            CurrencyExchange.Exec();
         }
     }
 }
