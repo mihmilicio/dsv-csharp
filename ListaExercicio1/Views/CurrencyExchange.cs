@@ -21,7 +21,7 @@ namespace ListaExercicio1.Views
             Console.WriteLine("--------------------------------");
             Console.WriteLine("Conversor monetário");
             Console.WriteLine("--------------------------------");
-            Console.Write("Insira o valor em reais (R$): ");
+            Console.WriteLine("Insira o valor em reais (R$): ");
             try
             {
                 real = Convert.ToDouble(Console.ReadLine());
