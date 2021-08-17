@@ -5,6 +5,12 @@ namespace ListaExercicio1.Views
 {
     public static class SortVector
     {
+        /*
+         * Desenvolver um algoritmo para receber 1000 valores automaticamente dentro de um vetor e ordenar do menor para o maior. 
+            a)	Desenvolver o algoritmo de ordenação;
+            b)	Utilizar uma função em C# para ordenação;
+         */
+        
         private static readonly Random Random = new();
         private static readonly int[] NumberList = new int[10];
         private const int MaxValue = 500;

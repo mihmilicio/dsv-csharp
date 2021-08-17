@@ -4,6 +4,9 @@ namespace ListaExercicio1.Views
 {
     public static class RectangleArea
     {
+        /*
+         * Escrever um algoritmo que receba a altura e a largura de um retângulo e calcule a sua área.
+         */
         public static void Exec()
         {
             Console.WriteLine("--------------------------------");
