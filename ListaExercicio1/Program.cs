@@ -8,7 +8,8 @@ namespace ListaExercicio1
         {
             // RectangleArea.Exec();
             // CurrencyExchange.Exec();
-            GreaterNumber.Exec();
+            // GreaterNumber.Exec();
+            AgeGroup.Exec();
             // SortVector.Exec();
         }
     }
