@@ -32,16 +32,13 @@ namespace ListaExercicio1.Views
                 OrderedList[i] = -1;
             }
             
-            for (int i = 0; i < InitialList.Length; i++)
+            foreach (var item in InitialList)
             {
-                int item = InitialList[i];
-                for (int j = 0; j < OrderedList.Length; j++)
+                for (var j = 0; j < OrderedList.Length; j++)
                 {
-                    if (OrderedList[j] == -1 || OrderedList[j] > item)
-                    {
-                        AddItemInPosition(item, j);
-                        break;
-                    }
+                    if (OrderedList[j] != -1 && OrderedList[j] <= item) continue;
+                    AddItemInPosition(item, j);
+                    break;
                 }
             }
 
@@ -64,7 +61,7 @@ namespace ListaExercicio1.Views
 
         private static void AddItemInPosition(int item, int pos)
         {
-            for (int i = OrderedList.Length - 1; i >= pos && i > 0; i--)
+            for (var i = OrderedList.Length - 1; i >= pos && i > 0; i--)
             {
                 OrderedList[i] = OrderedList[i - 1];
             }
