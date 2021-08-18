@@ -12,25 +12,44 @@ namespace ListaExercicio1.Views
          */
         
         private static readonly Random Random = new();
-        private static readonly int[] NumberList = new int[10];
+        private static readonly int[] InitialList = new int[10];
+        private static readonly int[] OrderedList = new int[10];
         private const int MaxValue = 500;
 
         public static void Exec()
         {
             // fill array randomly
-            for (var i = 0; i < NumberList.Length; i++)
+            for (var i = 0; i < InitialList.Length; i++)
             {
-                NumberList[i] = Random.Next(MaxValue);
+                InitialList[i] = Random.Next(MaxValue);
             }
 
-            DisplayArray(NumberList);
+            DisplayArray(InitialList);
 
-            // TODO order it manually
+            // order it manually
+            for (var i = 0; i < OrderedList.Length; i++)
+            {
+                OrderedList[i] = -1;
+            }
+            
+            for (int i = 0; i < InitialList.Length; i++)
+            {
+                int item = InitialList[i];
+                for (int j = 0; j < OrderedList.Length; j++)
+                {
+                    if (OrderedList[j] == -1 || OrderedList[j] > item)
+                    {
+                        AddItemInPosition(item, j);
+                        break;
+                    }
+                }
+            }
 
+            DisplayArray(OrderedList);
 
             // order it programmatically 
-            Array.Sort(NumberList);
-            DisplayArray(NumberList);
+            Array.Sort(InitialList);
+            DisplayArray(InitialList);
         }
 
         private static void DisplayArray(IEnumerable<int> array)
@@ -41,6 +60,15 @@ namespace ListaExercicio1.Views
             }
 
             Console.WriteLine("\n----");
+        }
+
+        private static void AddItemInPosition(int item, int pos)
+        {
+            for (int i = OrderedList.Length - 1; i >= pos && i > 0; i--)
+            {
+                OrderedList[i] = OrderedList[i - 1];
+            }
+            OrderedList[pos] = item;
         }
     }
 }

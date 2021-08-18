@@ -10,8 +10,8 @@ namespace ListaExercicio1
             // CurrencyExchange.Exec();
             // GreaterNumber.Exec();
             // AgeGroup.Exec();
-            Fibonacci.Exec();
-            // SortVector.Exec();
+            // Fibonacci.Exec();
+            SortVector.Exec();
         }
     }
 }
